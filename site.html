@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Ponto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #registro {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🕒 Bater Ponto</h1>
+  <button onclick="baterPonto()">Registrar Horário</button>
+  <div id="registro"></div>
+
+  <script>
+    function baterPonto() {
+      const agora = new Date();
+      const data = agora.toLocaleDateString('pt-BR');
+      const hora = agora.toLocaleTimeString('pt-BR');
+      document.getElementById('registro').innerText = `Ponto registrado em: ${data} às ${hora}`;
+    }
+  </script>
+</body>
+</html>
